@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>条子</h3>
+<script>
+    let ws = null;
+    if("WebSocket" in window) {
+        ws = new WebSocket("ws://localhost:2222/websocket");
+    }else{
+        console.log("error");
+    }
+    ws.onopen = () => {
+        console.log("lhll");
+    }
+</script>
+</body>
+</html>
